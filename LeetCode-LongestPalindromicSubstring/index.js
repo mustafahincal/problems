@@ -6,6 +6,9 @@
 const checkPalindrome = (str) => {
   let start = 0;
   let end = str.length - 1;
+  if (str.length === 1) {
+    return true;
+  }
   while (start < end) {
     if (str[start] !== str[end]) {
       return false;
@@ -17,20 +20,14 @@ const checkPalindrome = (str) => {
 };
 
 const longestPalindrome = (s) => {
-  let chArray = [];
-  let result = "";
-  for (const ch of s.split("")) {
-    let chIndex = chArray.findIndex((c) => c == ch);
-    if (chIndex != -1) {
-      let substring = chArray.slice(chIndex, chArray.length).join("") + ch;
-      if (checkPalindrome(substring) && substring.length > result.length) {
-        result = substring;
-      } else {
-        chArray.push(ch);
+  let longest = "";
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i + 1; j <= s.length; j++) {
+      let substring = s.substring(i, j);
+      if (checkPalindrome(substring) && substring.length > longest.length) {
+        longest = substring;
       }
-    } else {
-      chArray.push(ch);
     }
   }
-  return result;
+  return longest;
 };

@@ -1,4 +1,4 @@
-//* very bad code
+//* ---------- very bad code
 /* function reverse(x: number): number {
     
       let numStr : string[] = x.toString().split("");
@@ -24,7 +24,7 @@
       return Number(reversed);
   }; */
 
-//* short code
+//* ---------- short code
 /* function reverse(x: number): number {
   let reversed: string = String(Math.abs(x)).split("").reverse().join("");
 
@@ -34,8 +34,7 @@
 }
  */
 
-//* true code
-
+//* ---------- true code
 const reverse = (x: number): number => {
   let reversed: number = 0;
   let num: number = Math.abs(x);

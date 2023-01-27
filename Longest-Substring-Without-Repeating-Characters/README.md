@@ -21,7 +21,24 @@ Output: 3
 Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
-## Constraints:
+# Code
 
-0 <= s.length <= 5 \* 104
-s consists of English letters, digits, symbols and spaces.
+```
+const lengthOfLongestSubstring =  (s) => {
+  let longest = 0;
+  for (let i = 0; i < s.length; i++) {
+    const substringArray = [];
+    for (let j = i; j < s.length; j++) {
+      const letter = s[j];
+      if (!substringArray.includes(letter)) {
+        substringArray.push(letter);
+      } else {
+        break;
+      }
+    }
+    longest = Math.max(longest, substringArray.length);
+  }
+  return longest;
+};
+
+```

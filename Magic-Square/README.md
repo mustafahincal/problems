@@ -34,25 +34,6 @@ This took three replacements at a cost of 7.
 
 1
 
-# True Code
-
-```
-const reverse = (x: number): number => {
-
-    let reversed : number = 0;
-    let num : number = Math.abs(x);
-    while(num > 0){
-        reversed = (reversed * 10) + num % 10;
-        num = Math.floor(num/10);
-    }
-
-    if(reversed > Math.pow(2,31) - 1)
-        return 0;
-
-    return x < 0 ? -reversed : reversed;
-};
-```
-
 # Code
 
 ```

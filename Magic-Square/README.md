@@ -24,13 +24,13 @@ We can convert it to the following magic square:
 
 This took three replacements at a cost of 7.
 
-# Sample Input
+## Sample Input
 
 4 9 2
 3 5 7
 8 1 5
 
-# Sample Output
+## Sample Output
 
 1
 

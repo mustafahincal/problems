@@ -51,6 +51,4 @@ const longestPalindrome = (s) => {
   }
   return longest;
 };
-
-
 ```
